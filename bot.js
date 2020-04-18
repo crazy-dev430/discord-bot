@@ -30,13 +30,13 @@ client.on('message', message => {
     // }
     if (message.guild.id == test_guild_id) {
       if (message.member.roles.cache.some(r => r.id == test_role_id)) {
-        message.reply('Test');
+        message.reply('Hi MJ');
       }
     }
 
     if (message.guild.id == test_guild_id2) {
       if (message.member.roles.cache.some(r => r.id == test_role_id2)) {
-        message.reply('Test2');
+        message.reply('Hi DC');
       }
     }
 });
