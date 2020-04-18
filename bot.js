@@ -1,7 +1,6 @@
 //bot.js
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const BOT_TOKEN = "NzAwOTM0NzA0NzE0NjEyODM2.Xprktg.TIB6o9B7H-hjIRQ6C-xROlxX-fY";
 
 const test_guild_id = "698421803546050641";
 const test_role_id = "700968609979039775";
@@ -42,4 +41,4 @@ client.on('message', message => {
     }
 });
 
-client.login(BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
