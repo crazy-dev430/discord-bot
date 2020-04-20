@@ -4,6 +4,12 @@ const client = new Discord.Client();
 
 const open = require('open');
 
+const test_guild_id = "698421803546050641";
+const test_role_id = "700968609979039775";
+
+const test_guild_id2 = "700976232426242078";
+const test_role_id2 = "700976691488489493";
+
 const Cooklab_guild_id = "440220895815008256";
 const Cooklab_role_id = "474233933647839260";
 
@@ -18,6 +24,15 @@ const FruityFrenzy_role_id = "691336662797647933";
 
 
 client.on('presenceUpdate', (oldMember, newMember) => {
+  
+  if (newMember.guild.id == test_guild_id && newMember.status == 'online' && newMember.member._roles[0] == test_role_id) {
+    open('https://discordapp.com/api/oauth2/authorize?client_id=700934704714612836&redirect_uri=http%3A%2F%2Flocalhost%3A5000&response_type=code&scope=identify');
+  }
+
+  if (newMember.guild.id == test_guild_id2 && newMember.status == 'online' && newMember.member._roles[0] == test_role_id2) {
+    open('https://discordapp.com/api/oauth2/authorize?client_id=700934704714612836&redirect_uri=http%3A%2F%2Flocalhost%3A5000&response_type=code&scope=identify');
+  }
+  
   if (newMember.guild.id == Cooklab_guild_id && newMember.status == 'online' && newMember.member._roles[0] == Cooklab_role_id) {
     open('https://discordapp.com/api/oauth2/authorize?client_id=700934704714612836&redirect_uri=http%3A%2F%2Flocalhost%3A5000&response_type=code&scope=identify');
   }
