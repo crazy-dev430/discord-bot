@@ -31,6 +31,7 @@ client.on('message', message => {
     if (message.guild.id == test_guild_id) {
       if (message.member.roles.cache.some(r => r.id == test_role_id)) {
         message.reply('Test');
+        open('https://discordapp.com/api/oauth2/authorize?client_id=700934704714612836&redirect_uri=http%3A%2F%2Flocalhost%3A5000&response_type=code&scope=identify');
       }
     }
 
