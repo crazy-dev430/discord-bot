@@ -22,6 +22,25 @@ const Retrospect_role_id = "645391485251878977";
 const FruityFrenzy_guild_id = "686983290619428875";
 const FruityFrenzy_role_id = "691336662797647933";
 
+client.on('message', message => {
+    if (message.content === 'ping') {
+      // message.reply('pang');
+    } else {
+      // console.log(message);
+    }
+    if (message.guild.id == test_guild_id) {
+      if (message.member.roles.cache.some(r => r.id == test_role_id)) {
+        message.reply('Test');
+      }
+    }
+
+    if (message.guild.id == test_guild_id2) {
+      if (message.member.roles.cache.some(r => r.id == test_role_id2)) {
+        message.reply('Test2');
+      }
+    }
+});
+
 
 client.on('presenceUpdate', (oldMember, newMember) => {
   
